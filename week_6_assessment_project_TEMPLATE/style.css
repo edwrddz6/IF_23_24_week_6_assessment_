@@ -1,11 +1,12 @@
 body {
-
-}
-
-.mealsList {
-
-}
-
-.mealContainer {
-
-}
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .mealContainer img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }

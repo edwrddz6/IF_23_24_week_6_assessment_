@@ -6,6 +6,16 @@ console.log("connected to main.js")
     // Test that each works with the fetch request
 const CATEGORY = [
   "Starter",
+  "Beef",
+  "Chicken",
+  "Lamb",
+  "Pasta",
+  "Pork",
+  "Seafood",
+  "Vegetarian",
+  "Vegan",
+  "Side",
+  "Dessert"
 ]
 
 // select element that will store our category options
@@ -43,7 +53,14 @@ function getFetch() {
         // 2) add an image to the container UNDER the header
           // ex: "Broccoli & Stilton soup", followed by a picture of
           // broccoli & stilton soup
-        // ... add code here
+        const header = document.createElement("h3");
+        header.textContent = data.meals[i].strMeal;
+        container.appendChild(header);
+        
+        const mealImg = document.createElement("img");
+        mealImg.src = data.meals[i].strMealThumb; 
+        mealImg.alt = `${data.meals[i].strMeal} image`;
+        container.appendChild(mealImg);
       }
 
       return data;
